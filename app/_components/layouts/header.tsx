@@ -21,15 +21,15 @@ const Header = () => {
   return (
     
     <header>      
-      <nav className="flex items-center bg-secondary-900 m-4 p-4 rounded-t-lg shadow-lg sticky top-0 z-50">
-        <div className="basis-[50%] md:basis-[25%]">
-          <h1 className="font-semibold text-primary-50">El rincon de las mascotas</h1>
+      <nav className="flex items-center bg-secondary-900 m-4 p-4 rounded-full shadow-lg sticky top-0 z-50">
+        <div className="basis-[50%] lg:basis-[25%]">
+          <h3 className="font-heading font-bold text-primary-50">El rincon de las mascotas</h3>
         </div>        
-        <div className="hidden md:flex lg:gap-x-12 md:basis-[60%] justify-center">        
+        <div className="hidden lg:flex lg:gap-x-12 md:basis-[60%] justify-center">        
           {navigationItems.map((item, index) => (
             <ul key={index} className='list-none'>
               <li key={index}>
-                  <Link href={item.href} className="text-white hover:text-primary-200 font-medium text-sm lg:text-base xl:text-lg transition-colors duration-200 hover:scale-105 transform">
+                  <Link href={item.href} className="text-white hover:text-primary-200 font-heading font-bold text-sm lg:text-base xl:text-lg transition-colors duration-200 hover:scale-105 transform">
                       {item.label}
                   </Link>
               </li>
@@ -37,7 +37,7 @@ const Header = () => {
               
           ))}                         
         </div>
-        <div className='flex md:hidden basis-[50%] justify-end items-end'>
+        <div className='flex lg:hidden basis-[50%] justify-end items-end'>
           {/* Mobile Menu Button */}
           <button onClick={toggleMenu} className="w-8 h-8 space-y-1.5 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-md p-1" aria-label="Abrir menú de navegación">
               <span className={`block w-6 h-0.5 bg-primary-200 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
