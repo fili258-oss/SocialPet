@@ -1,29 +1,22 @@
 import Image from "next/image";
+import Button2 from "./_components/buttons/button2";
 
 export default function Home() {
   return (
-    <section className="flex flex-col min-h-screen items-center justify-center bg-primary-50">
-      <article className="flex-wrap">
-        <h1 className="font-heading font-bold text-4xl text-center">Hola mundo</h1>
+    <section className="flex flex-row min-h-screen pt-12 bg-primary-200 bg-[url(/assets/huellas-dos.png)] bg-contain">
+      <article className="flex lg:basis-[40%] justify-center items-center">        
         <Image
-          src="/assets/mascotas.avif"
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
-        <hr/>
+          src="/assets/macota-seccion-uno.avif"
+          alt="Mascotas tiernas"
+          width={400}
+          height={400}
+        />            
+      </article>            
+      <article className="flex flex-col lg:basis-[60%] p-4">
+        <h1 className="font-heading font-bold text-4xl text-start">Cambia la vida de los más pequeños.</h1>
+        <p>Con tu ayuda puedes mejorar la vida de muchas mascotas que día a día llegan a nuestro refujio.</p>
+        <Button2 url="https://gmail.com" text="¡Haz tu donación!"/>
       </article>
-      <article className="flex-wrap">
-        <h1 className="font-heading font-bold text-4xl text-center">Hola mundo</h1>
-        <Image
-          src="/assets/mascotas.avif"
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
-      </article>
-      
-
     </section>
   );
 }
