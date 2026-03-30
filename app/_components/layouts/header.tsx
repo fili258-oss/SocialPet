@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Button1 from "../buttons/button1"
 import { useState } from "react"
+import { PiArrowRightLight } from "react-icons/pi";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -46,11 +47,11 @@ const Header = () => {
         </div>
         
         <div className="hidden md:flex basis-1/3 justify-end">
-          <Button1 url="https://gmail.com" text="Registrate gratis!"/>
+          <Button1 url="https://gmail.com" text="Registrate gratis!" icon={<PiArrowRightLight/>}/>
         </div>
       </nav>
       {/* Mobile Menu */}
-      <div className={`md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+      <div className={`lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
           <nav className="px-4 py-4">
               <ul className="space-y-4 list-none">
                   {navigationItems.map((item, index) => (
