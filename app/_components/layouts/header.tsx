@@ -1,8 +1,7 @@
 "use client"
 import Link from 'next/link'
-import Button1 from "../buttons/button1"
 import { useState } from "react"
-import { PiArrowRightLight } from "react-icons/pi";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -47,7 +46,7 @@ const Header = () => {
         </div>
         
         <div className="hidden md:flex basis-1/3 justify-end">
-          <Button1 url="https://gmail.com" text="Registrate gratis!" icon={<PiArrowRightLight/>}/>
+          
         </div>
       </nav>
       {/* Mobile Menu */}
